@@ -4,3 +4,16 @@
 
 local config_path = vim.fn.stdpath("config")
 vim.g.python3_host_prog = config_path .. "/.venv/bin/python"
+
+vim.g.clipboard = {
+  name = "Windows clip.exe",
+  copy = {
+    ["+"] = "clip.exe",
+    ["*"] = "clip.exe",
+  },
+  paste = {
+    ["+"] = "powershell.exe -NoProfile -Command Get-Clipboard",
+    ["*"] = "powershell.exe -NoProfile -Command Get-Clipboard",
+  },
+  cache_enabled = 0,
+}
