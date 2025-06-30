@@ -7,3 +7,6 @@ vim.g.python3_host_prog = config_path .. "/.venv/bin/python"
 
 -- Disable LazyVim's auto formatting
 vim.g.autoformat = false
+
+-- Disable relative numbers
+vim.opt.relativenumber = false
